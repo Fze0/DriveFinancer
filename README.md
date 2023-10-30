@@ -6,14 +6,14 @@ DriveFinancer est une application simple de simulateur d'emprunt pour l'achat d'
 
 Avant d'utiliser cette application, assurez-vous d'avoir les dépendances suivantes installées :
 
-- Python 3.7.9
-- Les bibliothèques Python suivantes : customtkinter
+- Python 3 (testé avec Python 3.7.9)
+- Les bibliothèques Python suivantes : `customtkinter`, `packaging`
 
 ## Architecture du projet
 
 Le projet est divisé en trois fichiers principaux :
 
-1. `gui.py` : Ce fichier contient le code de l'interface utilisateur graphique (GUI) de l'application. Il utilise la bibliothèque customtkinter pour créer une fenêtre graphique et des éléments d'interface tels que des menus déroulants et des boutons.
+1. `gui.py` : Ce fichier contient le code de l'interface utilisateur graphique (GUI) de l'application. Il utilise la bibliothèque `customtkinter` pour créer une fenêtre graphique et des éléments d'interface tels que des menus déroulants et des boutons.
 
 2. `taux_calculator.py` : Ce fichier contient la logique de calcul du taux d'emprunt en fonction des critères sélectionnés. Il utilise des scores préalablement définis pour chaque critère pour effectuer les calculs.
 
@@ -21,15 +21,14 @@ Le projet est divisé en trois fichiers principaux :
 
 ## Utilisation
 
-1. Exécutez `main.py` pour lancer l'application.
+1. Exécutez `installer.bat` pour créer un environnement, installer les packages et lancer le projet. Sinon, exécutez le code en invite de commande avec `./main.py`.
 
 2. Sélectionnez les critères tels que le type de véhicule, le type d'énergie, le kilométrage, l'année de fabrication et le nombre de passagers à l'aide des menus déroulants.
 
 3. Cliquez sur le bouton "Calcul taux" pour obtenir le taux d'emprunt estimé.
 
-4. Les menus déroulants seront mis en rouge en cas d'erreur et redeviendront verts une fois que l'utilisateur aura fait un choix valide.
+4. Vous devez remplir tous les menus déroulants, sinon un message rouge apparaîtra pour vous indiquer où vous n'avez pas rempli en cas d'erreur et redeviendront verts une fois que l'utilisateur aura fait un choix valide.
 
 ## Auteur
 
 Théo D
-

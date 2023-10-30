@@ -14,11 +14,11 @@ ENERGIE_SCORES = {
 }
 
 KM_SCORES = {
-    "5k-10k/km": 9,
-    "10k-15k/km": 7,
-    "15k-20k/km": 5,
-    "20k-25k/km": 3,
-    "25k-30k/km": 1,
+    "5k-10k km/an": 9,
+    "10k-15k km/an": 7,
+    "15k-20k km/an": 5,
+    "20k-25k km/an": 3,
+    "25k-30k km/an": 1,
 }
 
 ANNEE_SCORES = {

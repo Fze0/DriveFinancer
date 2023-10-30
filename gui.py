@@ -1,6 +1,5 @@
 import customtkinter
-from PIL import Image
-
+from data import TYPE_SCORES, ENERGIE_SCORES, KM_SCORES, ANNEE_SCORES, PASSENGER_SCORES
 
 class GUI:
     def __init__(self):
@@ -9,7 +8,7 @@ class GUI:
         customtkinter.set_default_color_theme("green")
         self.app = customtkinter.CTk()
         self.app.geometry("500x500")
-        self.app.iconbitmap("image/logo.ico")
+        self.app.iconbitmap("images/logo.ico")
         self.app.title("Green Bank")
         self.frame = customtkinter.CTkFrame(master=self.app)
         self.frame.pack(pady=20, padx=60, fill="both", expand=True)
@@ -21,29 +20,23 @@ class GUI:
         self.titre.pack(pady=10, padx=10)
 
         # Création des menus déroulants
-        self.menu_type = customtkinter.CTkOptionMenu(master=self.frame,
-                                                     values=["Citadine", "Cabriolet", "Berline", "SUV / 4x4"])
+        self.menu_type = customtkinter.CTkOptionMenu(master=self.frame, values=list(TYPE_SCORES.keys()))
         self.menu_type.pack(pady=10, padx=10)
         self.menu_type.set("Type de véhicule")
 
-        self.menu_energie = customtkinter.CTkOptionMenu(master=self.frame,
-                                                        values=["Essence", "Electrique", "Gaz", "Diesel", "Hybride"])
+        self.menu_energie = customtkinter.CTkOptionMenu(master=self.frame, values=list(ENERGIE_SCORES.keys()))
         self.menu_energie.pack(pady=10, padx=10)
         self.menu_energie.set("Energie")
 
-        self.menu_km = customtkinter.CTkOptionMenu(master=self.frame,
-                                                   values=["5k-10k/km", "10k-15k/km", "15k-20k/km", "20k-25k/km",
-                                                           "25k-30k/km"])
+        self.menu_km = customtkinter.CTkOptionMenu(master=self.frame, values=list(KM_SCORES.keys()))
         self.menu_km.pack(pady=10, padx=10)
         self.menu_km.set("Kilometrage")
 
-        self.menu_annee = customtkinter.CTkOptionMenu(master=self.frame,
-                                                      values=["1960-1970", "1970-1980", "1980-1990", "1990-2000",
-                                                              "2000-2010", "Après 2010"])
+        self.menu_annee = customtkinter.CTkOptionMenu(master=self.frame, values=list(ANNEE_SCORES.keys()))
         self.menu_annee.pack(pady=10, padx=10)
         self.menu_annee.set("Année")
 
-        self.menu_passagers = customtkinter.CTkOptionMenu(master=self.frame, values=["1", "2", "3", "4"])
+        self.menu_passagers = customtkinter.CTkOptionMenu(master=self.frame, values=list(PASSENGER_SCORES.keys()))
         self.menu_passagers.pack(pady=10, padx=10)
         self.menu_passagers.set("Passagers")
 
